@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="239.0" layoutY="119.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="114.0" text="cu[" textFill="#0004ff">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font></Button>
+   </children>
+</Pane>
