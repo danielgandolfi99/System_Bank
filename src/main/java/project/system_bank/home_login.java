@@ -62,10 +62,10 @@ public class home_login {
                 '}';
     }
 
+
     @FXML
-    void login_action(ActionEvent event) {
-        toString();
-        System.out.println("ola");
+    void login_action(ActionEvent event){
+
     }
 
     @FXML
