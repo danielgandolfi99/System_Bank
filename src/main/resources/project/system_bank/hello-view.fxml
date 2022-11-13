@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="project.system_bank.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<Pane fx:id="login_screen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="222.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.home_login">
+   <children>
+      <Button fx:id="login_action" layoutX="138.0" layoutY="116.0" mnemonicParsing="false" onAction="#login_action" text="Entrar" />
+      <TextField fx:id="login" layoutX="37.0" layoutY="45.0" onAction="#get_login" promptText="login" />
+      <Label layoutX="55.0" layoutY="14.0" text="Bem vindo ao Banco!" />
+      <Label fx:id="create_account" layoutX="45.0" layoutY="120.0" text="Criar conta" />
+      <PasswordField fx:id="password" layoutX="37.0" layoutY="78.0" onAction="#get_password" promptText="senha" />
+   </children>
+</Pane>
