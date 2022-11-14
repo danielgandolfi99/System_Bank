@@ -2,11 +2,13 @@ package db.configs.DAO;
 
 import db.configs.ConexaoDB;
 import db.configs.Sql_constants;
+import org.jetbrains.annotations.NotNull;
 import project.system_bank.Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
+import java.util.*;
 
 public class DAO_cliente implements DAO{
 
@@ -26,7 +28,7 @@ public class DAO_cliente implements DAO{
             conn.close();
         } catch(SQLException e){
             //COLOCAR ERRO NA LOG
-            System.out.println("Algum erro aconteceu!");
+            System.out.println("ERRO DAO_CLIENTE/ADD");
             return false;
         }
         return true;
@@ -51,7 +53,7 @@ public class DAO_cliente implements DAO{
             System.out.println("Atualização feita com sucesso!");
         } catch(SQLException e){
             //COLOCAR ERRO NA LOG
-            System.out.println("Algum erro aconteceu!");
+            System.out.println("ERRO DAO_CLIENTE/UPDATE!");
             return false;
         }
         return true;
@@ -66,7 +68,7 @@ public class DAO_cliente implements DAO{
             stmt.setInt(1, cliente.getCliente_id());
         }catch (SQLException e){
             //COLOCAR NA LOG
-            System.out.println("Algum erro aconteceu!");
+            System.out.println("ERRO DAO_CLIENTE/REMOVE!");
             return false;
         }
         return true;
@@ -79,6 +81,24 @@ public class DAO_cliente implements DAO{
 
     @Override
     public List<Object> searchAll(Object obj) {
-        return null;
+        List<Object> clientes = new ArrayList();
+        try{
+            Connection conn = ConexaoDB.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(Sql_constants.searchCliente);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Cliente cliente = new Cliente();
+                cliente.setCliente_id(rs.getInt("cliente_id"));
+                cliente.setCpf(rs.getString("cpf"));
+                cliente.setNome(rs.getString("nome"));
+                cliente.setEmail(rs.getString("email"));
+                cliente.setTelefone(rs.getString("telefone"));
+                cliente.setNascimento(String.valueOf(rs.getDate("nascimento")));
+                clientes.add(cliente);
+            }
+        } catch (SQLException e) {
+            System.out.println("SEARCH ALL DEU ERRADO!");
+        }
+        return clientes;
     }
 }
