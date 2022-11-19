@@ -2,81 +2,36 @@ package project.system_bank;
 
 import java.util.Objects;
 
-public class Conta {
+public abstract class Conta {
     private int conta_id;
     private int agencia;
-    private int  saldo;
+    private int saldo;
     private int tipo;
     private int usuario;
     private int senha;
 
-    public Conta(int conta_id, int agencia, int saldo, int tipo, int usuario, int senha) {
-        this.conta_id = conta_id;
-        this.agencia = agencia;
-        this.saldo = saldo;
-        this.tipo = tipo;
-        this.usuario = usuario;
-        this.senha = senha;
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Conta conta = (Conta) o;
-        return conta_id == conta.conta_id && agencia == conta.agencia && saldo == conta.saldo && tipo == conta.tipo && usuario == conta.usuario && senha == conta.senha;
-    }
+    public abstract int getConta_id();
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(conta_id, agencia, saldo, tipo, usuario, senha);
-    }
+    public abstract void setConta_id(int conta_id);
 
-    public int getConta_id() {
-        return conta_id;
-    }
+    public abstract int getAgencia();
 
-    public void setConta_id(int conta_id) {
-        this.conta_id = conta_id;
-    }
+    public abstract void setAgencia(int agencia);
 
-    public int getAgencia() {
-        return agencia;
-    }
+    public abstract int getSaldo();
 
-    public void setAgencia(int agencia) {
-        this.agencia = agencia;
-    }
+    public abstract void setSaldo(int saldo);
 
-    public int getSaldo() {
-        return saldo;
-    }
+    public abstract int getTipo();
 
-    public void setSaldo(int saldo) {
-        this.saldo = saldo;
-    }
+    public abstract void setTipo(int tipo);
 
-    public int getTipo() {
-        return tipo;
-    }
+    public abstract int getUsuario();
 
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
+    public abstract void setUsuario(int usuario);
 
-    public int getUsuario() {
-        return usuario;
-    }
+    public abstract int getSenha();
 
-    public void setUsuario(int usuario) {
-        this.usuario = usuario;
-    }
-
-    public int getSenha() {
-        return senha;
-    }
-
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
+    public abstract void setSenha(int senha);
 }
