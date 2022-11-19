@@ -8,7 +8,7 @@ public class ConexaoDB {
     public static Connection getConnection() {
         System.out.println("Tentando conexão...");
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco","root","plqazm1928");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco","root","daniel99");
             System.out.println("Conexão feita com sucesso!");
             return conn;
         } catch (SQLException e){
