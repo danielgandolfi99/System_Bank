@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="login_screen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="197.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.home_login">
+   <children>
+      <Button fx:id="login_action" layoutX="214.0" layoutY="158.0" mnemonicParsing="false" onAction="#login_action" text="Confirmar" />
+      <TextField fx:id="login" layoutX="118.0" layoutY="46.0" onAction="#setLogin" prefHeight="25.0" prefWidth="149.0" />
+      <PasswordField fx:id="password" layoutX="119.0" layoutY="82.0" onAction="#setPassword" />
+      <Label layoutX="76.0" layoutY="51.0" text="Login:" />
+      <Label layoutX="75.0" layoutY="86.0" text="Senha:" />
+      <Label layoutX="34.0" layoutY="14.0" text="Crie seu login e senha para acessar a conta:" />
+      <PasswordField fx:id="password1" layoutX="118.0" layoutY="115.0" onAction="#setPassword" />
+      <Label layoutX="14.0" layoutY="119.0" text="Confirme a Senha:" />
+   </children>
+</Pane>
