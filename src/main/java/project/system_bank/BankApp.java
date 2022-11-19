@@ -20,7 +20,7 @@ public class BankApp extends Application {
     }
 
     protected static void createAccount() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Data_Account.class.getResource("create_account.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(BankApp.class.getResource("create_account.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
