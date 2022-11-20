@@ -12,7 +12,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-public class home_login {
+public class Login {
 
     @FXML
     private TextField login;
@@ -33,15 +33,15 @@ public class home_login {
 
     @FXML
     void login_action(ActionEvent event) throws IOException {
-
-        Login_Home user = new Login_Home(login.getText(),password.getText());
+        ClassLogin user = new ClassLogin(login.getText(),password.getText());
         System.out.println(user);
         //BankApp.getStage().close();
     }
 
     @FXML
-    void createAccount(ActionEvent event) throws IOException {
-        BankApp.createAccount();
+    void criarConta(ActionEvent event) throws IOException {
         BankApp.getStage().close();
+        BankApp.trocaTela("criar_conta");
+
     }
 }

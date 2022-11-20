@@ -17,10 +17,11 @@ public class DAO_cliente implements DAO{
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertCliente);
             stmt.setString(1,cliente.getNome());
-            stmt.setString(2,cliente.getCpf());
-            stmt.setString(3,cliente.getTelefone());
-            stmt.setString(4,cliente.getEmail());
-            stmt.setString(5,cliente.getNascimento());
+            stmt.setString(2,cliente.getSobrenome());
+            stmt.setString(3,cliente.getCpf());
+            stmt.setString(4,cliente.getTelefone());
+            stmt.setString(5,cliente.getEmail());
+            stmt.setString(6,cliente.getNascimento());
             stmt.execute();
             stmt.close();
             conn.close();
@@ -40,11 +41,12 @@ public class DAO_cliente implements DAO{
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.updateCliente);
             stmt.setInt(1, cliente.getCliente_id());
             stmt.setString(2,cliente.getNome());
-            stmt.setString(3,cliente.getCpf());
-            stmt.setString(4,cliente.getTelefone());
-            stmt.setString(5,cliente.getEmail());
-            stmt.setString(6,cliente.getNascimento());
-            stmt.setInt(7, cliente.getCliente_id());
+            stmt.setString(3,cliente.getSobrenome());
+            stmt.setString(4,cliente.getCpf());
+            stmt.setString(5,cliente.getTelefone());
+            stmt.setString(6,cliente.getEmail());
+            stmt.setString(7,cliente.getNascimento());
+            stmt.setInt(8, cliente.getCliente_id());
             stmt.execute();
             stmt.close();
             conn.close();
@@ -85,14 +87,15 @@ public class DAO_cliente implements DAO{
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.searchCliente);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                Cliente cliente = new Cliente();
+                /*Cliente cliente = new Cliente();
                 cliente.setCliente_id(rs.getInt("cliente_id"));
                 cliente.setCpf(rs.getString("cpf"));
                 cliente.setNome(rs.getString("nome"));
+                cliente.setSobrenome(rs.getString("sobrenome"));
                 cliente.setEmail(rs.getString("email"));
                 cliente.setTelefone(rs.getString("telefone"));
                 cliente.setNascimento(String.valueOf(rs.getDate("nascimento")));
-                clientes.add(cliente);
+                clientes.add(cliente);*/
             }
         } catch (SQLException e) {
             System.out.println("SEARCH ALL DEU ERRADO!");
