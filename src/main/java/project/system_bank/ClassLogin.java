@@ -4,11 +4,11 @@ public class ClassLogin {
 
     private String login;
 
-    private String password;
+    private String senha;
 
     public ClassLogin(String login, String password) {
         this.login = login;
-        this.password = password;
+        this.senha = password;
     }
 
     public String getLogin() {
@@ -20,18 +20,18 @@ public class ClassLogin {
     }
 
     public String getPassword() {
-        return password;
+        return senha;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.senha = password;
     }
 
     @Override
     public String toString() {
         return "Login_Home{" +
                 "login='" + login + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + senha + '\'' +
                 '}';
     }
 }

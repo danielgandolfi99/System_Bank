@@ -18,24 +18,20 @@ public class Login {
     private TextField login;
 
     @FXML
-    private PasswordField password;
-
-    @FXML
-    void setLogin(ActionEvent event) {
-
-    }
+    private PasswordField senha;
 
 
     @FXML
-    void setPassword(ActionEvent event) throws IOException {
-        login_action(event);
+    void setSenha(ActionEvent event) throws IOException {
+        fazerLogin(event);
     }
 
     @FXML
-    void login_action(ActionEvent event) throws IOException {
-        ClassLogin user = new ClassLogin(login.getText(),password.getText());
+    void fazerLogin(ActionEvent event) throws IOException {
+        ClassLogin user = new ClassLogin(login.getText(),senha.getText());
         System.out.println(user);
-        //BankApp.getStage().close();
+        BankApp.getStage().close();
+        BankApp.trocaTela("dados_conta");
     }
 
     @FXML

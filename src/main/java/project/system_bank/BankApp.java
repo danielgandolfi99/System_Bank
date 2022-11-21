@@ -2,7 +2,6 @@ package project.system_bank;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -30,6 +29,8 @@ public class BankApp extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         stage = primaryStage;
+
+        primaryStage.setTitle("System Bank");
 
         FXMLLoader start_FXML = new FXMLLoader(BankApp.class.getResource("start_bank.fxml"));
         start = new Scene(start_FXML.load());
@@ -70,12 +71,11 @@ public class BankApp extends Application {
         FXMLLoader alterar_dados_FXML = new FXMLLoader(BankApp.class.getResource("alterar_dados.fxml"));
         alterar_dados = new Scene(alterar_dados_FXML.load());
 
-        //FXMLLoader excluir_conta_FXML = new FXMLLoader(BankApp.class.getResource("excluir_conta.fxml"));
-        //excluir_conta = new Scene(excluir_conta_FXML.load());
+        FXMLLoader excluir_conta_FXML = new FXMLLoader(BankApp.class.getResource("excluir_conta.fxml"));
+        excluir_conta = new Scene(excluir_conta_FXML.load());
 
         primaryStage.setScene(start);
         primaryStage.show();
-        //setStage(stage);
     }
 
     public static void trocaTela(String tela) throws IOException {
