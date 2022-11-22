@@ -7,9 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
+import static project.system_bank.LogClass.escreve;
+
 
 public class DAO_cliente implements DAO{
-
+    //CONTINUAR MUDANDO A LIGAÇÃO ENTRE CLIENTE E CONTA -- COLOCAR O ID DO CLIENTE NA CONTA AO INVÉS DE COLOCAR NO CLIENTE
+    // -- SEARCH POR CPF E LIGA OS IDS
     @Override
     public boolean add(Object obj) {
         Cliente cliente = (Cliente) obj;
@@ -38,7 +41,6 @@ public class DAO_cliente implements DAO{
         try{
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.updateCliente);
-            stmt.setInt(1, cliente.getCliente_id());
             stmt.setString(2,cliente.getNome());
             stmt.setString(3,cliente.getCpf());
             stmt.setString(4,cliente.getTelefone());
@@ -50,7 +52,7 @@ public class DAO_cliente implements DAO{
             conn.close();
             System.out.println("Atualização feita com sucesso!");
         } catch(SQLException e){
-            //COLOCAR ERRO NA LOG
+            escreve(e.getMessage());
             System.out.println("ERRO DAO_CLIENTE/UPDATE!");
             return false;
         }
@@ -65,7 +67,7 @@ public class DAO_cliente implements DAO{
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.removeCliente);
             stmt.setInt(1, cliente.getCliente_id());
         }catch (SQLException e){
-            //COLOCAR NA LOG
+            escreve(e.getMessage());
             System.out.println("ERRO DAO_CLIENTE/REMOVE!");
             return false;
         }
@@ -95,6 +97,7 @@ public class DAO_cliente implements DAO{
                 clientes.add(cliente);
             }
         } catch (SQLException e) {
+            escreve(e.getMessage());
             System.out.println("SEARCH ALL DEU ERRADO!");
         }
         return clientes;

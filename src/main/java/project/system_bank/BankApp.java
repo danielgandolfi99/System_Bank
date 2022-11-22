@@ -37,7 +37,6 @@ public class BankApp extends Application {
         return this.stage = stage;
     }
     public static void main(String[] args) {
-        launch();
     }
 
 

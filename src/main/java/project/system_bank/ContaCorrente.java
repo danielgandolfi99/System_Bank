@@ -34,6 +34,7 @@ public class ContaCorrente extends Conta{
         return true;
     }
 
+    @Override
     public boolean transfere(double valor, Conta conta){
         if(valor>(super.getSaldo()*1.05) || valor<0){
             return false;
