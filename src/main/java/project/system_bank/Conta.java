@@ -6,16 +6,19 @@ public abstract class Conta {
     private int conta_id;
     private int agencia;
     private double saldo;
-    private String usuario;
-    private String senha;
+    private String cpf;
 
+    private String tipo;
 
-    public Conta(int conta_id, int agencia, double saldo, String usuario, String senha) {
+    public Conta(int conta_id, int agencia, double saldo, String cpf, String tipo) {
         this.conta_id = conta_id;
         this.agencia = agencia;
         this.saldo = saldo;
-        this.usuario = usuario;
-        this.senha = senha;
+        this.cpf = cpf;
+        this.tipo = tipo;
+    }
+
+    public Conta() {
     }
 
     public abstract boolean pix(double valor, Conta conta);
@@ -48,21 +51,19 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
-
-
 }

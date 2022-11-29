@@ -6,12 +6,20 @@ public class Sql_constants {
                                         "VALUES (null,?,?,?,?,?)";
 
     public static final String updateCliente = "UPDATE cliente " +
-                                                "SET nome = ?, cpf = ?, ,telefone = ?, email = ?, nascimento = ? " +
-                                                "WHERE cliente_id = ?";
+                                                "SET nome = ?, telefone = ?, email = ?, nascimento = ? " +
+                                                "WHERE cpf = ?";
 
     public static final String removeCliente = "DELETE FROM cliente " +
-                                                "WHERE cliente_id = ?";
+                                                "WHERE cpf = ?";
 
     public static final String searchCliente = "SELECT * FROM cliente";
+
+    public static final String insertConta = "INSERT INTO conta (conta_id, agencia, saldo, tipo, cpf) VALUES (null, ?, ?, ?, ?)";
+
+    public static final String updateConta = "UPDATE conta SET agencia = ?, tipo = ? WHERE cpf = ?";
+
+    public static final String removeConta = "DELETE FROM conta WHERE cpf = ?";
+
+    public static final String searchConta = "SELECT * FROM conta";
 
 }

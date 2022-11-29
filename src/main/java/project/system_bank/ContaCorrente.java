@@ -2,8 +2,12 @@ package project.system_bank;
 
 public class ContaCorrente extends Conta{
 
-    public ContaCorrente(int conta_id, int agencia, double saldo, String usuario, String senha) {
-        super(conta_id, agencia, saldo, usuario, senha);
+    public ContaCorrente(int conta_id, int agencia, double saldo, String cpf) {
+        super(conta_id, agencia, saldo, cpf, "c");
+    }
+
+    public ContaCorrente() {
+        super();
     }
 
     @Override
