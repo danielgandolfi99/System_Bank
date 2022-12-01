@@ -10,10 +10,9 @@ import java.util.*;
 import static project.system_bank.LogClass.escreve;
 
 
-public class DAO_cliente implements DAO{
+public class DAO_cliente {
     //CONTINUAR MUDANDO A LIGAÇÃO ENTRE CLIENTE E CONTA -- COLOCAR O ID DO CLIENTE NA CONTA AO INVÉS DE COLOCAR NO CLIENTE
     // -- SEARCH POR CPF E LIGA OS IDS
-    @Override
     public boolean add(Object obj) {
         Cliente cliente = (Cliente) obj;
         try{
@@ -35,7 +34,6 @@ public class DAO_cliente implements DAO{
         return true;
     }
 
-    @Override
     public boolean update(Object obj) {
         Cliente cliente = (Cliente) obj;
         try{
@@ -59,7 +57,6 @@ public class DAO_cliente implements DAO{
         return true;
     }
 
-    @Override
     public boolean remove(Object obj) {
         Cliente cliente = (Cliente) obj;
         try {
@@ -74,12 +71,10 @@ public class DAO_cliente implements DAO{
         return true;
     }
 
-    @Override
     public Object search(Object obj) {
         return null;
     }
 
-    @Override
     public List<Object> searchAll(Object obj) {
         List<Object> clientes = new ArrayList();
         try{

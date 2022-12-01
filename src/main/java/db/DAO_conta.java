@@ -1,6 +1,7 @@
 package db;
 
 import project.system_bank.Cliente;
+import project.system_bank.Conta;
 import project.system_bank.ContaCorrente;
 import project.system_bank.ContaPoupanca;
 
@@ -13,53 +14,50 @@ import java.util.*;
 import static project.system_bank.LogClass.escreve;
 
 
-public class DAO_conta implements DAO{
-    //CONTINUAR MUDANDO A LIGAÇÃO ENTRE CLIENTE E CONTA -- COLOCAR O ID DO CLIENTE NA CONTA AO INVÉS DE COLOCAR NO CLIENTE
-    // -- SEARCH POR CPF E LIGA OS IDS
-    @Override
-    public boolean add(Object obj) {
-        Conta conta = (Conta) obj;//if
-        try{
-            Connection conn = ConexaoDB.getConnection();
-            PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertConta);
-            stmt.setInt(1, conta.getAgencia());
-            stmt.setDouble(2, conta.getSaldo());
-            stmt.execute();
-            stmt.close();
-            conn.close();
-        } catch(SQLException e){
-            //COLOCAR ERRO NA LOG
-            System.out.println("ERRO DAO_CLIENTE/ADD");
-            return false;
+public class DAO_conta{
+    public boolean add(Object obj, String tipo) {
+        if (tipo.equals('c')) {
+            ContaCorrente conta = (ContaCorrente) obj;
+            try {
+                Connection conn = ConexaoDB.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertConta);
+                stmt.setString(1, "c");
+                stmt.setString(2, conta.getCpf());
+                stmt.execute();
+                stmt.close();
+                conn.close();
+            } catch (SQLException e) {
+                escreve(e.getMessage());
+                System.out.println("ERRO ADD/DAO_CONTA");
+                return false;
+            }
+        } else {
+            ContaPoupanca conta = (ContaPoupanca) obj;
+            try {
+                Connection conn = ConexaoDB.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertConta);
+                stmt.setString(1, "p");
+                stmt.setString(2, conta.getCpf());
+                stmt.execute();
+                stmt.close();
+                conn.close();
+                return true;
+            } catch (SQLException e) {
+                escreve(e.getMessage());
+                System.out.println("ERRO ADD/DAO_CONTA");
+                return false;
+            }
         }
         return true;
     }
 
-    @Override
+
     public boolean update(Object obj) {
-        Cliente cliente = (Cliente) obj;
-        try{
-            Connection conn = ConexaoDB.getConnection();
-            PreparedStatement stmt = conn.prepareStatement(Sql_constants.updateCliente);
-            stmt.setString(2,cliente.getNome());
-            stmt.setString(3,cliente.getCpf());
-            stmt.setString(4,cliente.getTelefone());
-            stmt.setString(5,cliente.getEmail());
-            stmt.setString(6,cliente.getNascimento());
-            stmt.setInt(7, cliente.getCliente_id());
-            stmt.execute();
-            stmt.close();
-            conn.close();
-            System.out.println("Atualização feita com sucesso!");
-        } catch(SQLException e){
-            escreve(e.getMessage());
-            System.out.println("ERRO DAO_CLIENTE/UPDATE!");
-            return false;
-        }
+
         return true;
     }
 
-    @Override
+
     public boolean remove(Object obj) {
         Cliente cliente = (Cliente) obj;
         try {
@@ -74,12 +72,10 @@ public class DAO_conta implements DAO{
         return true;
     }
 
-    @Override
     public Object search(Object obj) {
         return null;
     }
 
-    @Override
     public List<Object> searchAll(Object obj) {
         List<Object> contas = new ArrayList();
         try{

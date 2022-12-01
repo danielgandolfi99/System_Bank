@@ -14,7 +14,7 @@ public class Sql_constants {
 
     public static final String searchCliente = "SELECT * FROM cliente";
 
-    public static final String insertConta = "INSERT INTO conta (conta_id, agencia, saldo, tipo, cpf) VALUES (null, ?, ?, ?, ?)";
+    public static final String insertConta = "INSERT INTO conta (conta_id, agencia, saldo, tipo, cpf) VALUES (null, 110, 0.0, ?, ?)";
 
     public static final String updateConta = "UPDATE conta SET agencia = ?, tipo = ? WHERE cpf = ?";
 
