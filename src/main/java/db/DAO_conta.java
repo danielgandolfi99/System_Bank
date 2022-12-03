@@ -89,10 +89,18 @@ public class DAO_conta{
                     contas.add(conta);
                 }
             }
+            rs.close();
+            stmt.close();
+            conn.close();
         } catch (SQLException e) {
             escreve(e.getMessage());
             System.out.println("SEARCH ALL CONTA DEU ERRADO: " + e.getMessage());
         }
         return contas;
     }
+
+    public static void removeDinheiro(float valor, String cpf){
+
+    }
+
 }

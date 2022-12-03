@@ -11,8 +11,6 @@ import static project.system_bank.LogClass.escreve;
 
 
 public class DAO_cliente {
-    //CONTINUAR MUDANDO A LIGAÇÃO ENTRE CLIENTE E CONTA -- COLOCAR O ID DO CLIENTE NA CONTA AO INVÉS DE COLOCAR NO CLIENTE
-    // -- SEARCH POR CPF E LIGA OS IDS
     public static boolean add(Object obj) {
         Cliente cliente = (Cliente) obj;
         try{
@@ -96,4 +94,7 @@ public class DAO_cliente {
         }
         return clientes;
     }
+
+
+
 }
