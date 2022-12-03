@@ -1,5 +1,7 @@
 package project.system_bank;
 
+import db.DAO_cliente;
+import db.DAO_conta;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -148,7 +150,10 @@ public class BankApp extends Application {
 
 
     public static void main(String[] args) {
-        launch();
+        Cliente cliente = new Cliente("Jose", "122131212", "bobao", "sa@12", "12/12/12");
+        Conta contac = new ContaPoupanca(2, 122112.123, "122131212");
+        DAO_cliente.update(cliente);
+        DAO_conta.remove(contac);
     }
 
 }
