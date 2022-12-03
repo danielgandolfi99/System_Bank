@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import static project.system_bank.LogClass.escreve;
+
 public class ConexaoDB {
     public static Connection getConnection() {
         System.out.println("Tentando conexão...");
@@ -12,8 +14,7 @@ public class ConexaoDB {
             System.out.println("Conexão feita com sucesso!");
             return conn;
         } catch (SQLException e){
-            //SALVAR A EXCEPTION NUM ARQUIVO
-            //e.getMessage(); <- Funcao que recebe o erro como string
+            escreve(e.getMessage());
             System.out.println("Conexão falhou!");
             e.printStackTrace();
         }
