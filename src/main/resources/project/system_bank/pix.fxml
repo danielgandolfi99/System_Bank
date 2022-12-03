@@ -5,19 +5,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="191.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassPIX">
    <children>
-      <Text layoutX="46.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe os dados para realizar o PIX:" />
-      <Text layoutX="42.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor:" />
-      <TextField layoutX="85.0" layoutY="45.0" prefHeight="25.0" prefWidth="149.0" />
-      <Button layoutX="18.0" layoutY="153.0" mnemonicParsing="false" text="Voltar" />
-      <Button layoutX="196.0" layoutY="153.0" mnemonicParsing="false" text="Confirmar" />
-      <Text layoutX="55.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecione o tipo de transferência:" />
-      <MenuButton layoutX="85.0" layoutY="111.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Selecione">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
+      <Text layoutX="54.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o CPF que realizará o PIX:" />
+      <TextField fx:id="CPF_sai" layoutX="69.0" layoutY="45.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="20.0" layoutY="206.0" mnemonicParsing="false" text="Voltar" />
+      <Button layoutX="198.0" layoutY="206.0" mnemonicParsing="false"  text="Confirmar" />
+      <Text layoutX="101.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o valor:" />
+      <TextField fx:id="valor" layoutX="69.0" layoutY="106.0" />
+      <Text layoutX="64.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o CPF receberá o PIX:" />
+      <TextField fx:id="CPF_recebe" layoutX="69.0" layoutY="172.0" />
    </children>
 </Pane>

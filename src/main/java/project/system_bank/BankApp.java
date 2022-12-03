@@ -34,14 +34,8 @@ public class BankApp extends Application {
 
         primaryStage.setTitle("System Bank");
 
-        FXMLLoader start_FXML = new FXMLLoader(BankApp.class.getResource("start_bank.fxml"));
-        start = new Scene(start_FXML.load());
-
         FXMLLoader criar_conta_FXML = new FXMLLoader(BankApp.class.getResource("criar_conta.fxml"));
         criar_conta = new Scene(criar_conta_FXML.load());
-
-        FXMLLoader criar_login_FXML = new FXMLLoader(BankApp.class.getResource("criar_login.fxml"));
-        criar_login = new Scene(criar_login_FXML.load());
 
         FXMLLoader dados_conta_FXML = new FXMLLoader(BankApp.class.getResource("dados_conta.fxml"));
         dados_conta = new Scene(dados_conta_FXML.load());
@@ -49,26 +43,11 @@ public class BankApp extends Application {
         FXMLLoader deposito_FXML = new FXMLLoader(BankApp.class.getResource("deposito.fxml"));
         deposito = new Scene(deposito_FXML.load());
 
-        FXMLLoader extrato_FXML = new FXMLLoader(BankApp.class.getResource("extrato.fxml"));
-        extrato = new Scene(extrato_FXML.load());
-
         FXMLLoader transferencia_FXML = new FXMLLoader(BankApp.class.getResource("transferencia.fxml"));
         transferencia = new Scene(transferencia_FXML.load());
 
         FXMLLoader pix_FXML = new FXMLLoader(BankApp.class.getResource("pix.fxml"));
         pix = new Scene(pix_FXML.load());
-
-        FXMLLoader pix_chave_FXML = new FXMLLoader(BankApp.class.getResource("pix_chave.fxml"));
-        pix_chave = new Scene(pix_chave_FXML.load());
-
-        FXMLLoader pix_cpf_FXML = new FXMLLoader(BankApp.class.getResource("pix_cpf.fxml"));
-        pix_cpf = new Scene(pix_cpf_FXML.load());
-
-        FXMLLoader pix_email_FXML = new FXMLLoader(BankApp.class.getResource("pix_email.fxml"));
-        pix_email = new Scene(pix_email_FXML.load());
-
-        FXMLLoader pix_telefone_FXML = new FXMLLoader(BankApp.class.getResource("pix_telefone.fxml"));
-        pix_telefone = new Scene(pix_telefone_FXML.load());
 
         FXMLLoader alterar_dados_FXML = new FXMLLoader(BankApp.class.getResource("alterar_dados.fxml"));
         alterar_dados = new Scene(alterar_dados_FXML.load());
@@ -76,16 +55,12 @@ public class BankApp extends Application {
         FXMLLoader excluir_conta_FXML = new FXMLLoader(BankApp.class.getResource("excluir_conta.fxml"));
         excluir_conta = new Scene(excluir_conta_FXML.load());
 
-        primaryStage.setScene(start);
+        primaryStage.setScene(dados_conta);
         primaryStage.show();
     }
 
     public static void trocaTela(String tela) throws IOException {
         switch (tela){
-            case "start":
-                stage.setScene(start);
-                stage.show();
-                break;
             case "criar_conta":
                 stage.setScene(criar_conta);
                 stage.show();
@@ -150,7 +125,7 @@ public class BankApp extends Application {
 
 
     public static void main(String[] args) {
-
+        launch();
     }
 
 }
