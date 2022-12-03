@@ -5,15 +5,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassTransferencia">
    <children>
       <Text layoutX="28.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o CPF que realizará a transferência:" />
-      <TextField layoutX="69.0" layoutY="45.0" prefHeight="25.0" prefWidth="149.0" />
-      <Button layoutX="20.0" layoutY="206.0" mnemonicParsing="false" text="Voltar" />
-      <Button layoutX="198.0" layoutY="206.0" mnemonicParsing="false" text="Confirmar" />
+      <TextField fx:id="CPF_sai" layoutX="69.0" layoutY="45.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="20.0" layoutY="206.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+      <Button layoutX="198.0" layoutY="206.0" mnemonicParsing="false" onAction="#confirmar" text="Confirmar" />
       <Text layoutX="101.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o valor:" />
-      <TextField layoutX="69.0" layoutY="106.0" />
+      <TextField fx:id="valor" layoutX="69.0" layoutY="106.0" />
       <Text layoutX="39.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o CPF receberá a transferência:" />
-      <TextField layoutX="69.0" layoutY="172.0" />
+      <TextField fx:id="CPF_recebe" layoutX="69.0" layoutY="172.0" />
    </children>
 </Pane>

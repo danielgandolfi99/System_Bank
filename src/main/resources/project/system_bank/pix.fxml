@@ -9,8 +9,8 @@
    <children>
       <Text layoutX="54.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o CPF que realizará o PIX:" />
       <TextField fx:id="CPF_sai" layoutX="69.0" layoutY="45.0" prefHeight="25.0" prefWidth="149.0" />
-      <Button layoutX="20.0" layoutY="206.0" mnemonicParsing="false" text="Voltar" />
-      <Button layoutX="198.0" layoutY="206.0" mnemonicParsing="false"  text="Confirmar" />
+      <Button layoutX="20.0" layoutY="206.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+      <Button layoutX="198.0" layoutY="206.0" mnemonicParsing="false" onAction="#confirmar" text="Confirmar" />
       <Text layoutX="101.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o valor:" />
       <TextField fx:id="valor" layoutX="69.0" layoutY="106.0" />
       <Text layoutX="64.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o CPF receberá o PIX:" />
