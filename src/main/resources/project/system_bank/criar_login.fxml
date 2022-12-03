@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.CriarLogin">
+   <children>
+      <Text layoutX="110.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sua agência e conta são: " />
+      <Text layoutX="91.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conta:" />
+      <Text layoutX="81.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agência:" />
+      <Text layoutX="83.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie o login e a senha da sua conta:" />
+      <Text layoutX="86.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+      <Text layoutX="14.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirme sua senha:" />
+      <PasswordField fx:id="confirma_senha" layoutX="132.0" layoutY="226.0" onAction="#confirmaSenha" prefHeight="25.0" prefWidth="149.0" />
+      <PasswordField fx:id="senha" layoutX="132.0" layoutY="190.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="agencia" editable="false" layoutX="137.0" layoutY="48.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="conta" editable="false" layoutX="137.0" layoutY="84.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="271.0" layoutY="271.0" mnemonicParsing="false" onAction="#confirmar" text="Confirmar" />
+      <Text layoutX="88.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" />
+      <TextField fx:id="login" layoutX="132.0" layoutY="154.0" />
+   </children>
+</Pane>

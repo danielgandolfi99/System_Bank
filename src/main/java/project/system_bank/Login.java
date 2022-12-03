@@ -12,36 +12,32 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-public class home_login {
+public class Login {
 
     @FXML
     private TextField login;
 
     @FXML
-    private PasswordField password;
-
-    @FXML
-    void setLogin(ActionEvent event) {
-
-    }
+    private PasswordField senha;
 
 
     @FXML
-    void setPassword(ActionEvent event) throws IOException {
-        login_action(event);
+    void setSenha(ActionEvent event) throws IOException {
+        fazerLogin(event);
     }
 
     @FXML
-    void login_action(ActionEvent event) throws IOException {
-
-        Login_Home user = new Login_Home(login.getText(),password.getText());
+    void fazerLogin(ActionEvent event) throws IOException {
+        ClassLogin user = new ClassLogin(login.getText(),senha.getText());
         System.out.println(user);
-        //BankApp.getStage().close();
+        BankApp.getStage().close();
+        BankApp.trocaTela("dados_conta");
     }
 
     @FXML
-    void createAccount(ActionEvent event) throws IOException {
-        BankApp.createAccount();
+    void criarConta(ActionEvent event) throws IOException {
         BankApp.getStage().close();
+        BankApp.trocaTela("criar_conta");
+
     }
 }

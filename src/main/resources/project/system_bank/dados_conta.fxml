@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="298.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.DadosConta">
+   <children>
+      <Text layoutX="102.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja muito bem vindo!" />
+      <Text fx:id="nome_completo" layoutX="27.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nome_completo" />
+      <Text fx:id="saldo" layoutX="27.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="saldo" />
+      <Text fx:id="ag_conta" layoutX="257.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ag_conta" />
+      <Text fx:id="tp_conta" layoutX="257.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tp_conta" />
+      <Button layoutX="172.0" layoutY="174.0" mnemonicParsing="false" onAction="#alterarDados" prefHeight="25.0" prefWidth="119.0" text="ALTERAR DADOS" />
+      <Button layoutX="32.0" layoutY="214.0" mnemonicParsing="false" onAction="#transferencia" prefHeight="25.0" prefWidth="119.0" text="TRANSFERÊNCIA" />
+      <Button layoutX="32.0" layoutY="174.0" mnemonicParsing="false" onAction="#extrato" prefHeight="25.0" prefWidth="119.0" text="EXTRATO" />
+      <Button layoutX="172.0" layoutY="214.0" mnemonicParsing="false" onAction="#excluirConta" prefHeight="25.0" prefWidth="119.0" text="EXCLUIR CONTA" />
+      <Button layoutX="172.0" layoutY="134.0" mnemonicParsing="false" onAction="#areaPix" prefHeight="25.0" prefWidth="119.0" text="ÁREA PIX" />
+      <Button layoutX="32.0" layoutY="134.0" mnemonicParsing="false" onAction="#deposito" prefHeight="25.0" prefWidth="119.0" text="DEPÓSITO" />
+      <Text layoutX="86.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecione qual opção deseja:" />
+      <Button layoutX="14.0" layoutY="259.0" mnemonicParsing="false" onAction="#sairConta" text="Sair da Conta" />
+   </children>
+</Pane>
