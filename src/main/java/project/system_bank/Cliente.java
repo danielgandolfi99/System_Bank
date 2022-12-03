@@ -21,6 +21,8 @@ public class Cliente {
         this.nascimento = nascimento;
     }
 
+    public Cliente(){
+    }
 
 
     public int getCliente_id() {

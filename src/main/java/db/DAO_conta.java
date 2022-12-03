@@ -1,6 +1,5 @@
 package db;
 
-import project.system_bank.Cliente;
 import project.system_bank.Conta;
 import project.system_bank.ContaCorrente;
 import project.system_bank.ContaPoupanca;
