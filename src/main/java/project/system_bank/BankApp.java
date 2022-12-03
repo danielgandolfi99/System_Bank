@@ -12,18 +12,11 @@ public class BankApp extends Application {
 
     private static Stage stage;
 
-    private static Scene start;
     private static Scene criar_conta;
-    private static Scene criar_login;
     private static Scene dados_conta;
     private static Scene deposito;
-    private static Scene extrato;
     private static Scene transferencia;
     private static Scene pix;
-    private static Scene pix_chave;
-    private static Scene pix_cpf;
-    private static Scene pix_email;
-    private static Scene pix_telefone;
     private static Scene alterar_dados;
     private static Scene excluir_conta;
 
@@ -65,10 +58,6 @@ public class BankApp extends Application {
                 stage.setScene(criar_conta);
                 stage.show();
                 break;
-            case "criar_login":
-                stage.setScene(criar_login);
-                stage.show();
-                break;
             case "dados_conta":
                 stage.setScene(dados_conta);
                 stage.show();
@@ -77,32 +66,12 @@ public class BankApp extends Application {
                 stage.setScene(deposito);
                 stage.show();
                 break;
-            case "extrato":
-                stage.setScene(extrato);
-                stage.show();
-                break;
             case "transferencia":
                 stage.setScene(transferencia);
                 stage.show();
                 break;
             case "pix":
                 stage.setScene(pix);
-                stage.show();
-                break;
-            case "pix_chave":
-                stage.setScene(pix_chave);
-                stage.show();
-                break;
-            case "pix_cpf":
-                stage.setScene(pix_cpf);
-                stage.show();
-                break;
-            case "pix_email":
-                stage.setScene(pix_email);
-                stage.show();
-                break;
-            case "pix_telefone":
-                stage.setScene(pix_telefone);
                 stage.show();
                 break;
             case "alterar_dados":

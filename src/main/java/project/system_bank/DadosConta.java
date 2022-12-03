@@ -47,7 +47,7 @@ public class DadosConta {
         @FXML
         void areaPix(ActionEvent event) throws IOException {
             BankApp.getStage().close();
-            BankApp.trocaTela("area_pix");
+            BankApp.trocaTela("pix");
         }
 
         @FXML
