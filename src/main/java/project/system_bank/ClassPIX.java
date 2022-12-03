@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class ClassPIX {
 
     @FXML
@@ -16,13 +18,15 @@ public class ClassPIX {
     private TextField CPF_recebe;
 
     @FXML
-    void voltar(ActionEvent event) {
-
+    void voltar(ActionEvent event) throws IOException {
+        BankApp.getStage().close();
+        BankApp.trocaTela("dados_conta");
     }
 
     @FXML
-    void confirmar(ActionEvent event) {
-
+    void confirmar(ActionEvent event) throws IOException {
+        BankApp.getStage().close();
+        BankApp.trocaTela("dados_conta");
     }
 
 }
