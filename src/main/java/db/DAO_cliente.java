@@ -92,7 +92,7 @@ public class DAO_cliente {
             }
         } catch (SQLException e) {
             escreve(e.getMessage());
-            System.out.println("SEARCH ALL DEU ERRADO!");
+            System.out.println("SEARCH ALL DEU ERRADoO!");
         }
         return clientes;
     }
