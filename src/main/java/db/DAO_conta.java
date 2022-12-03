@@ -13,78 +13,67 @@ import java.util.*;
 
 import static project.system_bank.LogClass.escreve;
 
-
 public class DAO_conta{
-    public boolean add(Object obj, String tipo) {
-        if (tipo.equals('c')) {
-            ContaCorrente conta = (ContaCorrente) obj;
+    public static boolean add(Conta conta) {
             try {
                 Connection conn = ConexaoDB.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertConta);
-                stmt.setString(1, "c");
+                stmt.setString(1, conta.getTipo());
                 stmt.setString(2, conta.getCpf());
                 stmt.execute();
                 stmt.close();
                 conn.close();
             } catch (SQLException e) {
                 escreve(e.getMessage());
-                System.out.println("ERRO ADD/DAO_CONTA");
+                System.out.println("ERRO ADD/DAO_CONTA: " + e.getMessage());
                 return false;
             }
-        } else {
-            ContaPoupanca conta = (ContaPoupanca) obj;
-            try {
-                Connection conn = ConexaoDB.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertConta);
-                stmt.setString(1, "p");
-                stmt.setString(2, conta.getCpf());
-                stmt.execute();
-                stmt.close();
-                conn.close();
-                return true;
-            } catch (SQLException e) {
-                escreve(e.getMessage());
-                System.out.println("ERRO ADD/DAO_CONTA");
-                return false;
-            }
-        }
         return true;
     }
 
-
-    public boolean update(Object obj) {
-
-        return true;
-    }
-
-
-    public boolean remove(Object obj) {
-        Cliente cliente = (Cliente) obj;
+    public static boolean update(Conta conta) {
         try {
             Connection conn = ConexaoDB.getConnection();
-            PreparedStatement stmt = conn.prepareStatement(Sql_constants.removeCliente);
-            stmt.setInt(1, cliente.getCliente_id());
-        }catch (SQLException e){
+            PreparedStatement stmt = conn.prepareStatement(Sql_constants.updateConta);
+            stmt.setString(1, conta.getTipo());
+            stmt.setString(2, conta.getCpf());
+            stmt.execute();
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
             escreve(e.getMessage());
-            System.out.println("ERRO DAO_CLIENTE/REMOVE!");
+            System.out.println("ERRO ADD/DAO_CONTA: " + e.getMessage());
             return false;
         }
         return true;
     }
 
-    public Object search(Object obj) {
+    public static boolean remove(Conta conta) {
+        try {
+            Connection conn = ConexaoDB.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(Sql_constants.removeConta);
+            stmt.setString(1, conta.getCpf());
+        }catch (SQLException e){
+            escreve(e.getMessage());
+            System.out.println("ERRO DAO_CLIENTE/REMOVE:" + e.getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public static Conta search(Conta conta) {
         return null;
     }
 
-    public List<Object> searchAll(Object obj) {
-        List<Object> contas = new ArrayList();
+    public static List<Conta> searchAll() {
+        List<Conta> contas = new ArrayList<Conta>();
         try{
             Connection conn = ConexaoDB.getConnection();
-            PreparedStatement stmt = conn.prepareStatement(Sql_constants.searchCliente);
+            PreparedStatement stmt = conn.prepareStatement(Sql_constants.searchConta);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 if(rs.getString("tipo").equals("c")){
-                    ContaCorrente conta = new ContaCorrente();
+                    Conta conta = new ContaCorrente();
                     conta.setConta_id(rs.getInt("conta_id"));
                     conta.setCpf(rs.getString("cpf"));
                     conta.setSaldo(rs.getFloat("saldo"));
@@ -92,7 +81,7 @@ public class DAO_conta{
                     conta.setTipo(rs.getString("tipo"));
                     contas.add(conta);
                 } else {
-                    ContaPoupanca conta = new ContaPoupanca();
+                    Conta conta = new ContaPoupanca();
                     conta.setConta_id(rs.getInt("conta_id"));
                     conta.setCpf(rs.getString("cpf"));
                     conta.setSaldo(rs.getFloat("saldo"));
@@ -103,7 +92,7 @@ public class DAO_conta{
             }
         } catch (SQLException e) {
             escreve(e.getMessage());
-            System.out.println("SEARCH ALL DEU ERRADO!");
+            System.out.println("SEARCH ALL CONTA DEU ERRADO: " + e.getMessage());
         }
         return contas;
     }

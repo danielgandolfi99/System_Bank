@@ -23,7 +23,6 @@ public abstract class Conta {
 
     public abstract boolean pix(double valor, Conta conta);
     public abstract boolean saca(double valor);
-
     public abstract boolean transfere(double valor, Conta conta);
     public abstract boolean deposita(double valor);
 

@@ -13,7 +13,7 @@ import static project.system_bank.LogClass.escreve;
 public class DAO_cliente {
     //CONTINUAR MUDANDO A LIGAÇÃO ENTRE CLIENTE E CONTA -- COLOCAR O ID DO CLIENTE NA CONTA AO INVÉS DE COLOCAR NO CLIENTE
     // -- SEARCH POR CPF E LIGA OS IDS
-    public boolean add(Object obj) {
+    public static boolean add(Object obj) {
         Cliente cliente = (Cliente) obj;
         try{
             Connection conn = ConexaoDB.getConnection();
@@ -28,27 +28,23 @@ public class DAO_cliente {
             conn.close();
         } catch(SQLException e){
             //COLOCAR ERRO NA LOG
-            System.out.println("ERRO DAO_CLIENTE/ADD");
+            System.out.println("ERRO DAO_CLIENTE/ADD" + e.getMessage());
             return false;
         }
         return true;
     }
 
-    public boolean update(Object obj) {
+    public static boolean update(Object obj) {
         Cliente cliente = (Cliente) obj;
         try{
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.updateCliente);
-            stmt.setString(2,cliente.getNome());
-            stmt.setString(3,cliente.getCpf());
-            stmt.setString(4,cliente.getTelefone());
-            stmt.setString(5,cliente.getEmail());
-            stmt.setString(6,cliente.getNascimento());
-            stmt.setInt(7, cliente.getCliente_id());
+            stmt.setString(1,cliente.getTelefone());
+            stmt.setString(2,cliente.getEmail());
+            stmt.setString(3, cliente.getCpf());
             stmt.execute();
             stmt.close();
             conn.close();
-            System.out.println("Atualização feita com sucesso!");
         } catch(SQLException e){
             escreve(e.getMessage());
             System.out.println("ERRO DAO_CLIENTE/UPDATE!");
@@ -57,12 +53,15 @@ public class DAO_cliente {
         return true;
     }
 
-    public boolean remove(Object obj) {
+    public static boolean remove(Object obj) {
         Cliente cliente = (Cliente) obj;
         try {
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.removeCliente);
-            stmt.setInt(1, cliente.getCliente_id());
+            stmt.setString(1, cliente.getCpf());
+            stmt.execute();
+            stmt.close();
+            conn.close();
         }catch (SQLException e){
             escreve(e.getMessage());
             System.out.println("ERRO DAO_CLIENTE/REMOVE!");
@@ -71,11 +70,11 @@ public class DAO_cliente {
         return true;
     }
 
-    public Object search(Object obj) {
+    public static Object search(Object obj) {
         return null;
     }
 
-    public List<Object> searchAll(Object obj) {
+    public static List<Object> searchAll(Object obj) {
         List<Object> clientes = new ArrayList();
         try{
             Connection conn = ConexaoDB.getConnection();
