@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="232.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.CriarConta">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="232.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.CriarConta">
    <children>
-      <TextField fx:id="nome" layoutX="72.0" layoutY="50.0" prefHeight="25.0" prefWidth="149.0" />
-      <Text layoutX="30.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: " />
+      <TextField fx:id="nome" layoutX="207.0" layoutY="50.0" prefHeight="25.0" prefWidth="149.0" />
+      <Text layoutX="168.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: " wrappingWidth="38.5078125" />
       <Label layoutX="96.0" layoutY="14.0" text="Preencha corretamente as suas informações para criar sua conta" />
       <Text layoutX="41.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
-      <TextField fx:id="sobrenome" layoutX="360.0" layoutY="50.0" />
-      <Text layoutX="287.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome:" />
       <TextField fx:id="email" layoutX="72.0" layoutY="119.0" />
       <Text layoutX="34.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
       <TextField fx:id="telefone" layoutX="360.0" layoutY="85.0" />
@@ -25,7 +20,7 @@
       <Hyperlink layoutX="27.0" layoutY="194.0" onAction="#fazerLogin" text="Faça login em vez disso" />
       <TextField fx:id="cpf" layoutX="72.0" layoutY="85.0" prefHeight="25.0" prefWidth="149.0" />
       <Text layoutX="30.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o tipo de conta que deseja:" />
-      <MenuButton layoutX="228.0" layoutY="159.0" mnemonicParsing="false" text="Selecione">
+      <MenuButton fx:id="tipo" layoutX="228.0" layoutY="159.0" mnemonicParsing="false" text="Selecione">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />

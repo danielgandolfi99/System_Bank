@@ -1,19 +1,19 @@
 package project.system_bank;
 
+import db.ConexaoDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 public class CriarConta {
 
     @FXML
     private TextField nome;
-
-    @FXML
-    private TextField sobrenome;
 
     @FXML
     private TextField cpf;
