@@ -26,8 +26,9 @@ public class ClassPIX {
     private TextField CPF_recebe;
 
     @FXML
-    void voltar(ActionEvent event) {
-
+    void voltar(ActionEvent event) throws IOException {
+        BankApp.getStage().close();
+        BankApp.trocaTela("dados_conta");
     }
 
     @FXML
@@ -62,6 +63,7 @@ public class ClassPIX {
         } catch(Exception e){
             System.out.println(e.getMessage());
         }
-
+        BankApp.getStage().close();
+        BankApp.trocaTela("dados_conta");
     }
-    }
+}
