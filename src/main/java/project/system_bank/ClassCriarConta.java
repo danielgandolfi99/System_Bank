@@ -64,10 +64,10 @@ public class ClassCriarConta implements Initializable {
             DAO_cliente.add(cliente);
 
             if(String.valueOf(tipoConta.getValue()).equals("Corrente")){
-                ContaCorrente conta = new ContaCorrente(0, cliente.getCpf_conta());
+                ContaCorrente conta = new ContaCorrente(0, cliente.getCpf_cliente());
                 DAO_conta.add(conta);
             }else{
-                ContaPoupanca conta = new ContaPoupanca(0, cliente.getCpf_conta());
+                ContaPoupanca conta = new ContaPoupanca(0, cliente.getCpf_cliente());
                 DAO_conta.add(conta);
             }
 

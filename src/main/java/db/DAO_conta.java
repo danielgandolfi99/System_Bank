@@ -99,8 +99,4 @@ public class DAO_conta{
         return contas;
     }
 
-    public static void removeDinheiro(float valor, String cpf){
-
-    }
-
 }
