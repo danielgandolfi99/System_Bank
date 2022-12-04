@@ -1,6 +1,0 @@
-Cannot add or update a child row: a foreign key constraint fails (`banco`.`conta`, CONSTRAINT `cpf_fk` FOREIGN KEY (`cpf`) REFERENCES `cliente` (`cpf`) ON DELETE CASCADE)
-Cannot add or update a child row: a foreign key constraint fails (`banco`.`conta`, CONSTRAINT `cpf_fk` FOREIGN KEY (`cpf`) REFERENCES `cliente` (`cpf`) ON DELETE CASCADE)
-Cannot add or update a child row: a foreign key constraint fails (`banco`.`conta`, CONSTRAINT `cpf_fk` FOREIGN KEY (`cpf`) REFERENCES `cliente` (`cpf`) ON DELETE CASCADE)
-No value specified for parameter 2
-Access denied for user 'root'@'localhost' (using password: YES)
-Access denied for user 'root'@'localhost' (using password: YES)

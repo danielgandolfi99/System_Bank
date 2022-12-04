@@ -2,8 +2,12 @@ package project.system_bank;
 
 public class ContaPoupanca extends Conta{
 
+    public ContaPoupanca(double saldo, String cpf) {
+        super(110, saldo, cpf, "Poupança");
+    }
+
     public ContaPoupanca(int conta_id, double saldo, String cpf) {
-        super(conta_id, 110, saldo, cpf, "p");
+        super(conta_id, 110, saldo, cpf, "Poupança");
     }
 
     public ContaPoupanca() {

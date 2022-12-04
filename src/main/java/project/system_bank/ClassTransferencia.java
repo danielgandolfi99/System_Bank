@@ -36,11 +36,11 @@ public class ClassTransferencia {
             ResultSet rs = stmt.executeQuery();
             rs.next();
             float saldos = rs.getFloat("saldo");
-            float quantidade = Float.valueOf(valor.getText());
+            float quantidade = (Float.valueOf(valor.getText()));
 
             if(saldos>=quantidade){
                 stmt = conn.prepareStatement("UPDATE conta SET saldo = saldo - ? WHERE cpf = ?;");
-                stmt.setFloat(1,quantidade);
+                stmt.setFloat(1,(quantidade * (float) 1.05));
                 stmt.setString(2,CPF_sai.getText());
                 stmt.execute();
 
@@ -49,6 +49,7 @@ public class ClassTransferencia {
                 stmt.setString(2,CPF_recebe.getText());
                 stmt.execute();
 
+                rs.close();
                 stmt.close();
                 conn.close();
             } else {

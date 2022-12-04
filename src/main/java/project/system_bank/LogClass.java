@@ -15,7 +15,6 @@ public class LogClass {
                  PrintWriter pw = new PrintWriter(bw)){
                 pw.println(erro);
             }
-            System.out.println("DADOS SALVOS!");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

@@ -1,5 +1,9 @@
 package project.system_bank;
 
+import db.ConexaoDB;
+import db.DAO_cliente;
+import db.DAO_conta;
+import db.Sql_constants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,11 +15,14 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import static java.lang.Integer.parseInt;
+import static project.system_bank.LogClass.escreve;
 
 public class ClassCriarConta implements Initializable {
 
@@ -56,10 +63,24 @@ public class ClassCriarConta implements Initializable {
     }
     @FXML
     void confirmar(ActionEvent event) throws IOException {
-        System.out.println(tipoConta.getValue());
+        try{
+            Cliente cliente = new Cliente((nome.getText() + " " + sobrenome.getText()), cpf.getText(), telefone.getText(), email.getText(), data_nascimento.getValue().toString());
+            DAO_cliente.add(cliente);
+
+            if(String.valueOf(tipoConta.getValue()).equals("Corrente")){
+                ContaCorrente conta = new ContaCorrente(0, cliente.getCpf());
+                DAO_conta.add(conta);
+            }else{
+                ContaPoupanca conta = new ContaPoupanca(0, cliente.getCpf());
+                DAO_conta.add(conta);
+            }
+
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            escreve(e.getMessage());
+        }
         BankApp.getStage().close();
         BankApp.trocaTela("dados_conta");
-        System.out.println(cpf.getText());
     }
 
     @FXML

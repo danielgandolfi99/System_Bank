@@ -10,6 +10,13 @@ public abstract class Conta {
 
     private String tipo;
 
+    public Conta(int agencia, double saldo, String cpf, String tipo) {
+        this.agencia = agencia;
+        this.saldo = saldo;
+        this.cpf = cpf;
+        this.tipo = tipo;
+    }
+
     public Conta(int conta_id, int agencia, double saldo, String cpf, String tipo) {
         this.conta_id = conta_id;
         this.agencia = agencia;

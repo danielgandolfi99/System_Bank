@@ -11,8 +11,7 @@ import static project.system_bank.LogClass.escreve;
 
 
 public class DAO_cliente {
-    public static boolean add(Object obj) {
-        Cliente cliente = (Cliente) obj;
+    public static boolean add(Cliente cliente) {
         try{
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertCliente);
@@ -25,15 +24,14 @@ public class DAO_cliente {
             stmt.close();
             conn.close();
         } catch(SQLException e){
-            //COLOCAR ERRO NA LOG
+            escreve(e.getMessage());
             System.out.println("ERRO DAO_CLIENTE/ADD" + e.getMessage());
             return false;
         }
         return true;
     }
 
-    public static boolean update(Object obj) {
-        Cliente cliente = (Cliente) obj;
+    public static boolean update(Cliente cliente) {
         try{
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.updateCliente);
@@ -51,12 +49,11 @@ public class DAO_cliente {
         return true;
     }
 
-    public static boolean remove(Object obj) {
-        Cliente cliente = (Cliente) obj;
+    public static boolean remove(String cpf) {
         try {
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.removeCliente);
-            stmt.setString(1, cliente.getCpf());
+            stmt.setString(1, cpf);
             stmt.execute();
             stmt.close();
             conn.close();
