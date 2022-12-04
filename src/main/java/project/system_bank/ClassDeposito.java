@@ -1,15 +1,12 @@
 package project.system_bank;
 
-
 import db.ConexaoDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 import static project.system_bank.LogClass.escreve;
 import static project.system_bank.Pdf.gerarPdf;
