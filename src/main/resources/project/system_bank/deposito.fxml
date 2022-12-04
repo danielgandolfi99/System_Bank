@@ -5,14 +5,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="157.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="157.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassDeposito">
    <children>
       <Text layoutX="66.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o valor que deseja despositar:" />
       <Text layoutX="80.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor:" />
-      <TextField layoutX="122.0" layoutY="48.0" prefHeight="25.0" prefWidth="149.0" />
-      <Button layoutX="14.0" layoutY="118.0" mnemonicParsing="false" text="Voltar" />
-      <Button layoutX="252.0" layoutY="118.0" mnemonicParsing="false" text="Confirmar" />
+      <TextField fx:id="valor" layoutX="122.0" layoutY="48.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="14.0" layoutY="118.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+      <Button layoutX="252.0" layoutY="118.0" mnemonicParsing="false" onAction="#confirmar" text="Confirmar" />
       <Text layoutX="26.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF a depositar:" />
-      <TextField layoutX="122.0" layoutY="83.0" />
+      <TextField fx:id="CPF" layoutX="122.0" layoutY="83.0" />
    </children>
 </Pane>

@@ -1,41 +1,32 @@
 package project.system_bank;
 
-import db.ConexaoDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 
-public class CriarConta {
-
-    @FXML
-    private TextField nome;
-
-    @FXML
-    private TextField cpf;
+public class ClassAlterarDados {
 
     @FXML
     private TextField telefone;
 
     @FXML
-    private TextField email;
+    private TextField cpf;
 
     @FXML
-    private DatePicker data_nascimento;
+    private TextField email;
 
     @FXML
     void confirmar(ActionEvent event) throws IOException {
         BankApp.getStage().close();
-        BankApp.trocaTela("criar_login");
+        BankApp.trocaTela("dados_conta");
     }
 
     @FXML
-    void fazerLogin(ActionEvent event) throws IOException {
+    void voltar(ActionEvent event) throws IOException {
         BankApp.getStage().close();
-        BankApp.trocaTela("start");
+        BankApp.trocaTela("dados_conta");
     }
+
 }

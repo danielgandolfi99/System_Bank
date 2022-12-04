@@ -4,10 +4,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ExcluirConta">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassExcluirConta">
    <children>
       <Button layoutX="214.0" layoutY="93.0" mnemonicParsing="false" onAction="#confirmar" text="Confirmar" />
-      <TextField fx:id="login" layoutX="74.0" layoutY="64.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="CPF" layoutX="74.0" layoutY="64.0" prefHeight="25.0" prefWidth="149.0" />
       <Label layoutX="39.0" layoutY="68.0" text="CPF:" />
       <Label layoutX="50.0" layoutY="14.0" text="Deseja realmente excluir a sua conta?" textFill="#ff0101" />
       <Label layoutX="36.0" layoutY="40.0" text="Informe o CPF da conta que deseja excluir:" />
