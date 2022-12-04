@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassTabela">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassTabela">
    <children>
       <Text layoutX="295.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Cadastrais do Cliente:" />
       <Button layoutX="38.0" layoutY="485.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
       <Button layoutX="632.0" layoutY="485.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" />
-      <TableView layoutX="62.0" layoutY="61.0" prefHeight="161.0" prefWidth="618.0">
+      <TableView fx:id="tabela_cliente" layoutX="62.0" layoutY="61.0" prefHeight="161.0" prefWidth="618.0">
         <columns>
           <TableColumn fx:id="cliente_id" prefWidth="60.0" text="ID" />
             <TableColumn fx:id="telefone" prefWidth="95.0" text="TELEFONE" />
@@ -20,7 +19,7 @@
             <TableColumn fx:id="cpf_cliente" prefWidth="111.0" text="CPF" />
         </columns>
       </TableView>
-      <TableView layoutX="62.0" layoutY="290.0" prefHeight="161.0" prefWidth="618.0">
+      <TableView fx:id="tabela_conta" layoutX="62.0" layoutY="290.0" prefHeight="161.0" prefWidth="618.0">
          <columns>
             <TableColumn fx:id="conta_id" prefWidth="60.0" text="ID" />
             <TableColumn fx:id="agencia" prefWidth="95.0" text="AGÊNCIA" />

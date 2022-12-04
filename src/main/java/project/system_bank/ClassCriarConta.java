@@ -1,9 +1,7 @@
 package project.system_bank;
 
-import db.ConexaoDB;
 import db.DAO_cliente;
 import db.DAO_conta;
-import db.Sql_constants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,8 +13,6 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -68,10 +64,10 @@ public class ClassCriarConta implements Initializable {
             DAO_cliente.add(cliente);
 
             if(String.valueOf(tipoConta.getValue()).equals("Corrente")){
-                ContaCorrente conta = new ContaCorrente(0, cliente.getCpf());
+                ContaCorrente conta = new ContaCorrente(0, cliente.getCpf_conta());
                 DAO_conta.add(conta);
             }else{
-                ContaPoupanca conta = new ContaPoupanca(0, cliente.getCpf());
+                ContaPoupanca conta = new ContaPoupanca(0, cliente.getCpf_conta());
                 DAO_conta.add(conta);
             }
 

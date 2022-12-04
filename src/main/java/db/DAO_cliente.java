@@ -16,7 +16,7 @@ public class DAO_cliente {
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.insertCliente);
             stmt.setString(1,cliente.getNome());
-            stmt.setString(2,cliente.getCpf());
+            stmt.setString(2,cliente.getCpf_conta());
             stmt.setString(3,cliente.getTelefone());
             stmt.setString(4,cliente.getEmail());
             stmt.setString(5,cliente.getNascimento());
@@ -37,7 +37,7 @@ public class DAO_cliente {
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.updateCliente);
             stmt.setString(1,cliente.getTelefone());
             stmt.setString(2,cliente.getEmail());
-            stmt.setString(3, cliente.getCpf());
+            stmt.setString(3, cliente.getCpf_conta());
             stmt.execute();
             stmt.close();
             conn.close();
@@ -69,8 +69,8 @@ public class DAO_cliente {
         return null;
     }
 
-    public static List<Object> searchAll(Object obj) {
-        List<Object> clientes = new ArrayList();
+    public static List<Cliente> searchAll() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
         try{
             Connection conn = ConexaoDB.getConnection();
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.searchCliente);
@@ -78,7 +78,7 @@ public class DAO_cliente {
             while (rs.next()) {
                 Cliente cliente = new Cliente();
                 cliente.setCliente_id(rs.getInt("cliente_id"));
-                cliente.setCpf(rs.getString("cpf"));
+                cliente.setCpf_conta(rs.getString("cpf"));
                 cliente.setNome(rs.getString("nome"));
                 cliente.setEmail(rs.getString("email"));
                 cliente.setTelefone(rs.getString("telefone"));

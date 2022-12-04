@@ -3,15 +3,15 @@ package project.system_bank;
 public class Cliente {
     private int cliente_id;
     private String nome;
-    private String cpf;
+    private String cpf_conta;
     private String telefone;
     private String email;
     private String nascimento;
 
 
-    public Cliente(String nome, String cpf, String telefone, String email, String nascimento) {
+    public Cliente(String nome, String cpf_conta, String telefone, String email, String nascimento) {
         this.nome = nome;
-        this.cpf = cpf;
+        this.cpf_conta = cpf_conta;
         this.telefone = telefone;
         this.email = email;
         this.nascimento = nascimento;
@@ -37,12 +37,12 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpf_conta() {
+        return cpf_conta;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpf_conta(String cpf_conta) {
+        this.cpf_conta = cpf_conta;
     }
 
     public String getTelefone() {
@@ -74,7 +74,7 @@ public class Cliente {
         return "Cliente{" +
                 "cliente_id=" + cliente_id +
                 ", nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
+                ", cpf='" + cpf_conta + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", email='" + email + '\'' +
                 ", nascimento='" + nascimento + '\'' +
