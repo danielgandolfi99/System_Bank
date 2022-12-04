@@ -20,7 +20,6 @@ public class Cliente {
     public Cliente(){
     }
 
-
     public int getCliente_id() {
         return cliente_id;
     }

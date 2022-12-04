@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import static project.system_bank.LogClass.escreve;
+import static project.system_bank.Pdf.gerarPdf;
 
 public class ClassDeposito {
 
@@ -42,6 +43,7 @@ public class ClassDeposito {
             System.out.println(e.getMessage());
             escreve(e.getMessage());
         }
+        gerarPdf();
         BankApp.getStage().close();
         BankApp.trocaTela("dados_conta");
     }

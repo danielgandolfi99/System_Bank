@@ -60,10 +60,6 @@ public class DAO_conta{
         return true;
     }
 
-    public static Conta search(Conta conta) {
-        return null;
-    }
-
     public static List<Conta> searchAll() {
         List<Conta> contas = new ArrayList<Conta>();
         try{

@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-import static project.system_bank.Pdf.gerarPdf;
 
 public class BankApp extends Application { // Daniel
 
@@ -103,7 +102,7 @@ public class BankApp extends Application { // Daniel
 
 
     public static void main(String[] args) {
-        gerarPdf();
+        launch();
     }
 
 }

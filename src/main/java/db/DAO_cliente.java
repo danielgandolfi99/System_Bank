@@ -65,10 +65,6 @@ public class DAO_cliente {
         return true;
     }
 
-    public static Object search(Object obj) {
-        return null;
-    }
-
     public static List<Cliente> searchAll() {
         List<Cliente> clientes = new ArrayList<Cliente>();
         try{
@@ -91,7 +87,4 @@ public class DAO_cliente {
         }
         return clientes;
     }
-
-
-
 }

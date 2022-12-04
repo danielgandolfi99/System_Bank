@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 
 import static java.lang.Integer.parseInt;
 import static project.system_bank.LogClass.escreve;
+import static project.system_bank.Pdf.gerarPdf;
 
 public class ClassCriarConta implements Initializable {
 
@@ -75,6 +76,7 @@ public class ClassCriarConta implements Initializable {
             System.out.println(e.getMessage());
             escreve(e.getMessage());
         }
+        gerarPdf();
         BankApp.getStage().close();
         BankApp.trocaTela("dados_conta");
     }

@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import static project.system_bank.Pdf.gerarPdf;
+
 public class ClassAlterarDados {
 
     @FXML
@@ -40,6 +42,7 @@ public class ClassAlterarDados {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        gerarPdf();
         BankApp.getStage().close();
         BankApp.trocaTela("dados_conta");
     }
