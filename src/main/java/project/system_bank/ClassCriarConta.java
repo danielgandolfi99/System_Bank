@@ -1,13 +1,23 @@
 package project.system_bank;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class ClassCriarConta {
+import static java.lang.Integer.parseInt;
+
+public class ClassCriarConta implements Initializable {
 
     @FXML
     private TextField telefone;
@@ -28,9 +38,28 @@ public class ClassCriarConta {
     private TextField email;
 
     @FXML
+    private ComboBox<TipoConta> tipoConta;
+
+    private List<TipoConta> conta = new ArrayList<>();
+
+    private ObservableList<TipoConta> obsTipoConta;
+
+    public void carregarTipoConta(){
+        TipoConta conta1 = new TipoConta(1, "Corrente");
+        TipoConta conta2 = new TipoConta(2, "Poupança");
+
+        conta.add(conta1);
+        conta.add(conta2);
+
+        obsTipoConta = FXCollections.observableArrayList(conta);
+        tipoConta.setItems(obsTipoConta);
+    }
+    @FXML
     void confirmar(ActionEvent event) throws IOException {
+        System.out.println(tipoConta.getValue());
         BankApp.getStage().close();
         BankApp.trocaTela("dados_conta");
+        System.out.println(cpf.getText());
     }
 
     @FXML
@@ -39,4 +68,42 @@ public class ClassCriarConta {
         BankApp.trocaTela("dados_conta");
     }
 
+    public void campoNumericoCPF(){
+        cpf.textProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    try {
+                        if (!newValue.equals("")) {
+                            String cpf_numerico = cpf.getText();
+                            cpf_numerico = cpf_numerico.replaceAll("[^0-9]","");
+                            cpf.setText(cpf_numerico);
+                        }
+                    } catch (Exception e) {
+                        cpf.setText(oldValue);
+                    }
+                }
+        );
+    }
+
+    public void campoNumericoTelefone(){
+        telefone.textProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    try {
+                        if (!newValue.equals("")) {
+                            String numero = telefone.getText();
+                            numero = numero.replaceAll("[^0-9]","");
+                            telefone.setText(numero);
+                        }
+                    } catch (Exception e) {
+                        telefone.setText(oldValue);
+                    }
+                }
+        );
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        campoNumericoCPF();
+        campoNumericoTelefone();
+        carregarTipoConta();
+    }
 }
