@@ -2,7 +2,7 @@ package project.system_bank;
 
 import java.util.Objects;
 
-public abstract class Conta {
+public abstract class Conta { // Lucas e Daniel
     private int conta_id;
     private int agencia;
     private double saldo;

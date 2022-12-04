@@ -1,6 +1,6 @@
 package project.system_bank;
 
-public class TipoConta {
+public class TipoConta { // Lucas
     private int id;
     private String tipo_da_conta;
 

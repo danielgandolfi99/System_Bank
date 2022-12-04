@@ -10,7 +10,7 @@ import java.util.*;
 import static project.system_bank.LogClass.escreve;
 
 
-public class DAO_cliente {
+public class DAO_cliente { // Lucas
     public static boolean add(Cliente cliente) {
         try{
             Connection conn = ConexaoDB.getConnection();

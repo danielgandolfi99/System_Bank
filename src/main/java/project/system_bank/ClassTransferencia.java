@@ -13,7 +13,7 @@ import java.sql.ResultSet;
 import static project.system_bank.LogClass.escreve;
 import static project.system_bank.Pdf.gerarPdf;
 
-public class ClassTransferencia {
+public class ClassTransferencia { // Daniel
 
     @FXML
     private TextField valor;

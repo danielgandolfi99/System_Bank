@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 
-public class ClassTabela {
+public class ClassTabela { // Lucas
 
 
     @FXML

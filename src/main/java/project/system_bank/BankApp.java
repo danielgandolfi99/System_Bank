@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class BankApp extends Application {
+public class BankApp extends Application { // Daniel
 
     private static Stage stage;
 

@@ -1,6 +1,6 @@
 package db;
 
-public class Sql_constants {
+public class Sql_constants { // Daniel
     public static final String insertCliente = "INSERT INTO cliente (cliente_id, nome, cpf, telefone, email, nascimento) VALUES (null, ?, ?, ?, ?, ?);";
 
     public static final String updateCliente = "UPDATE cliente SET telefone = ?, email = ? WHERE cpf = ?";

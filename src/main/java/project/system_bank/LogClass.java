@@ -2,7 +2,7 @@ package project.system_bank;
 
 import java.io.*;
 
-public class LogClass {
+public class LogClass { // Daniel
 
     public static void escreve(String erro){
         try{

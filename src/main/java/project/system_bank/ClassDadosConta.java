@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 
 import java.io.IOException;
 
-public class ClassDadosConta { // Daniel
+public class ClassDadosConta { // Lucas
 
     @FXML
     void alterarDados(ActionEvent event) throws IOException {

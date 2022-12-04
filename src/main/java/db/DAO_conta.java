@@ -12,7 +12,7 @@ import java.util.*;
 
 import static project.system_bank.LogClass.escreve;
 
-public class DAO_conta{
+public class DAO_conta{ // Daniel
     public static boolean add(Conta conta) {
             try {
                 Connection conn = ConexaoDB.getConnection();

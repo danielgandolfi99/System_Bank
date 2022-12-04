@@ -1,6 +1,6 @@
 package project.system_bank;
 
-public class Cliente {
+public class Cliente { // Lucas
     private int cliente_id;
     private String nome;
     private String cpf_cliente;

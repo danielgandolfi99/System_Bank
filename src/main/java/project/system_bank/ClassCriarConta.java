@@ -21,7 +21,7 @@ import static java.lang.Integer.parseInt;
 import static project.system_bank.LogClass.escreve;
 import static project.system_bank.Pdf.gerarPdf;
 
-public class ClassCriarConta implements Initializable {
+public class ClassCriarConta implements Initializable { // Lucas
 
     @FXML
     private TextField telefone;

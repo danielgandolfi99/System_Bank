@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import static project.system_bank.LogClass.escreve;
 import static project.system_bank.Pdf.gerarPdf;
 
-public class ClassDeposito {
+public class ClassDeposito { // Daniel
 
     @FXML
     private TextField valor;

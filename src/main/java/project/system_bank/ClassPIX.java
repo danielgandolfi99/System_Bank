@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import static project.system_bank.LogClass.escreve;
 import static project.system_bank.Pdf.gerarPdf;
 
-public class ClassPIX {
+public class ClassPIX { // Lucas
 
     @FXML
     private TextField valor;
