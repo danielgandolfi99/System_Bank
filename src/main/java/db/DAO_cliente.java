@@ -58,7 +58,7 @@ public class DAO_cliente {
             stmt.close();
             conn.close();
         }catch (SQLException e){
-            escreve(e.getMessage());
+            escreve("DAO_cliente:" + e.getMessage());
             System.out.println("ERRO DAO_CLIENTE/REMOVE!");
             return false;
         }
@@ -82,7 +82,7 @@ public class DAO_cliente {
                 clientes.add(cliente);
             }
         } catch (SQLException e) {
-            escreve(e.getMessage());
+            escreve("DAO_cliente:" + e.getMessage());
             System.out.println("SEARCH ALL DEU ERRADoO!");
         }
         return clientes;

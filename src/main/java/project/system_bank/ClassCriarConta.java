@@ -73,8 +73,7 @@ public class ClassCriarConta implements Initializable {
             }
 
         } catch (Exception e){
-            System.out.println(e.getMessage());
-            escreve(e.getMessage());
+            escreve("ClassCriarConta: " + e.getMessage());
         }
         gerarPdf();
         BankApp.getStage().close();
@@ -98,6 +97,7 @@ public class ClassCriarConta implements Initializable {
                         }
                     } catch (Exception e) {
                         cpf.setText(oldValue);
+                        escreve("ClassCriarConta: " + e.getMessage());
                     }
                 }
         );
@@ -114,6 +114,7 @@ public class ClassCriarConta implements Initializable {
                         }
                     } catch (Exception e) {
                         telefone.setText(oldValue);
+                        escreve("ClassCriarConta: " + e.getMessage());
                     }
                 }
         );

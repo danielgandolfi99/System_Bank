@@ -23,7 +23,7 @@ public class DAO_conta{
                 stmt.close();
                 conn.close();
             } catch (SQLException e) {
-                escreve(e.getMessage());
+                escreve("DAO_conta:" + e.getMessage());
                 System.out.println("ERRO ADD/DAO_CONTA: " + e.getMessage());
                 return false;
             }
@@ -40,7 +40,7 @@ public class DAO_conta{
             stmt.close();
             conn.close();
         } catch (SQLException e) {
-            escreve(e.getMessage());
+            escreve("DAO_conta:" + e.getMessage());
             System.out.println("ERRO ADD/DAO_CONTA: " + e.getMessage());
             return false;
         }
@@ -53,7 +53,7 @@ public class DAO_conta{
             PreparedStatement stmt = conn.prepareStatement(Sql_constants.removeConta);
             stmt.setString(1, conta.getCpf());
         }catch (SQLException e){
-            escreve(e.getMessage());
+            escreve("DAO_conta:" + e.getMessage());
             System.out.println("ERRO DAO_CLIENTE/REMOVE:" + e.getMessage());
             return false;
         }
@@ -89,7 +89,7 @@ public class DAO_conta{
             stmt.close();
             conn.close();
         } catch (SQLException e) {
-            escreve(e.getMessage());
+            escreve("DAO_conta:" + e.getMessage());
             System.out.println("SEARCH ALL CONTA DEU ERRADO: " + e.getMessage());
         }
         return contas;

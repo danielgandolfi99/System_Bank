@@ -75,8 +75,7 @@ public class ClassTransferencia {
             }
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
-            escreve(String.valueOf(e));
+            escreve("ClassTransferencia: " + String.valueOf(e));
         }
         gerarPdf();
         BankApp.getStage().close();

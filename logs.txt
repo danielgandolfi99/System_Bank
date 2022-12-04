@@ -1,25 +1,5 @@
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECTse saldo, tipo FROM conta WHERE cpf = '321'' at line 1
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECTse saldo, tipo FROM conta WHERE cpf = '321'' at line 1
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECTse saldo, tipo FROM conta WHERE cpf = '321'' at line 1
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-No suitable driver found for jdbc:mysql://localhost:3306/banco
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
-C:\Users\Lucas\IdeaProjects\System_Bank\Dados.pdf (O sistema não pode encontrar o caminho especificado)
+ClassTransferencia: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECTs saldo, tipo FROM conta WHERE cpf = '12312312300'' at line 1
+ClassPIX: Statement.executeQuery() cannot issue statements that do not produce result sets.
+ClassPIX: Statement.executeQuery() cannot issue statements that do not produce result sets.
+ClassPIX: Statement.executeQuery() cannot issue statements that do not produce result sets.
+DAO_cliente:Statement.executeQuery() cannot issue statements that do not produce result sets.

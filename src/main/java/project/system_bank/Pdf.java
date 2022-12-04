@@ -53,7 +53,7 @@ public class Pdf {
 
             document.close();
         }catch (Exception e){
-            escreve(e.getMessage());
+            escreve("Pdf: " + e.getMessage());
         }
     }
 

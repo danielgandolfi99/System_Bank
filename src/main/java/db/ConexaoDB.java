@@ -14,7 +14,7 @@ public class ConexaoDB {
             System.out.println("Conexão feita com sucesso!");
             return conn;
         } catch (SQLException e){
-            escreve(e.getMessage());
+            escreve("ConexaoDB: " + e.getMessage());
             System.out.println("Conexão falhou!");
             e.printStackTrace();
         }

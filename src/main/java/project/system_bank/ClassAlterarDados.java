@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import static project.system_bank.LogClass.escreve;
 import static project.system_bank.Pdf.gerarPdf;
 
 public class ClassAlterarDados {
@@ -40,6 +41,7 @@ public class ClassAlterarDados {
             stmt.close();
             conn.close();
         } catch (Exception e) {
+            escreve("ClassAlterraDados:" + e.getMessage());
             System.out.println(e.getMessage());
         }
         gerarPdf();

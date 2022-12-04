@@ -38,7 +38,7 @@ public class ClassDeposito {
             conn.close();
         } catch (Exception e){
             System.out.println(e.getMessage());
-            escreve(e.getMessage());
+            escreve("ClassDeposito: " + e.getMessage());
         }
         gerarPdf();
         BankApp.getStage().close();

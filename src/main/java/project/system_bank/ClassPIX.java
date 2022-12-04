@@ -77,8 +77,7 @@ public class ClassPIX {
             }
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
-            escreve(String.valueOf(e));
+            escreve("ClassPIX: " + e.getMessage());
         }
         gerarPdf();
         BankApp.getStage().close();
