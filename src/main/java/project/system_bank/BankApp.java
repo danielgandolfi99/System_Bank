@@ -16,6 +16,8 @@ public class BankApp extends Application { // Daniel
     private static Scene transferencia;
     private static Scene pix;
     private static Scene alterar_dados;
+
+    private static Scene dados_cadastrais;
     private static Scene excluir_conta;
 
 
@@ -42,6 +44,9 @@ public class BankApp extends Application { // Daniel
 
         FXMLLoader alterar_dados_FXML = new FXMLLoader(BankApp.class.getResource("alterar_dados.fxml"));
         alterar_dados = new Scene(alterar_dados_FXML.load());
+
+        FXMLLoader dados_cadastrais_FXML = new FXMLLoader(BankApp.class.getResource("dados_cadastrais.fxml"));
+        dados_cadastrais = new Scene(dados_cadastrais_FXML.load());
 
         FXMLLoader excluir_conta_FXML = new FXMLLoader(BankApp.class.getResource("excluir_conta.fxml"));
         excluir_conta = new Scene(excluir_conta_FXML.load());
@@ -74,6 +79,10 @@ public class BankApp extends Application { // Daniel
                 break;
             case "alterar_dados":
                 stage.setScene(alterar_dados);
+                stage.show();
+                break;
+            case "dados_cadastrais":
+                stage.setScene(dados_cadastrais);
                 stage.show();
                 break;
             case "excluir_conta":

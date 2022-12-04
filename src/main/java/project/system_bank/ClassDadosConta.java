@@ -43,4 +43,10 @@ public class ClassDadosConta { // Daniel
         BankApp.trocaTela("criar_conta");
     }
 
+    @FXML
+    void dadosCadastrais(ActionEvent event) throws IOException {
+        BankApp.getStage().close();
+        BankApp.trocaTela("dados_cadastrais");
+    }
+
 }

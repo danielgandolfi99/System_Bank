@@ -5,15 +5,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassDadosConta">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="232.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassDadosConta">
    <children>
       <Text layoutX="102.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja muito bem vindo!" />
       <Button layoutX="172.0" layoutY="114.0" mnemonicParsing="false" onAction="#alterarDados" prefHeight="25.0" prefWidth="119.0" text="ALTERAR DADOS" />
       <Button layoutX="32.0" layoutY="114.0" mnemonicParsing="false" onAction="#transferencia" prefHeight="25.0" prefWidth="119.0" text="TRANSFERÊNCIA" />
-      <Button layoutX="172.0" layoutY="154.0" mnemonicParsing="false" onAction="#excluirConta" prefHeight="25.0" prefWidth="119.0" text="EXCLUIR CONTA" />
+      <Button layoutX="102.0" layoutY="194.0" mnemonicParsing="false" onAction="#excluirConta" prefHeight="25.0" prefWidth="119.0" text="EXCLUIR CONTA" />
       <Button layoutX="172.0" layoutY="74.0" mnemonicParsing="false" onAction="#areaPix" prefHeight="25.0" prefWidth="119.0" text="ÁREA PIX" />
       <Button layoutX="32.0" layoutY="74.0" mnemonicParsing="false" onAction="#deposito" prefHeight="25.0" prefWidth="119.0" text="DEPÓSITO" />
       <Text layoutX="86.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecione qual opção deseja:" />
       <Button layoutX="32.0" layoutY="154.0" mnemonicParsing="false" onAction="#criarConta" prefHeight="25.0" prefWidth="119.0" text="CRIAR CONTA" />
+      <Button layoutX="172.0" layoutY="154.0" mnemonicParsing="false" onAction="#dadosCadastrais" prefHeight="25.0" prefWidth="119.0" text="DADOS" />
    </children>
 </Pane>
