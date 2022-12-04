@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.system_bank.ClassTabela">
+   <children>
+      <Text layoutX="295.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Cadastrais do Cliente:" />
+      <Button layoutX="38.0" layoutY="485.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+      <Button layoutX="632.0" layoutY="485.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" />
+      <TableView layoutX="62.0" layoutY="61.0" prefHeight="161.0" prefWidth="618.0">
+        <columns>
+          <TableColumn fx:id="cliente_id" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="telefone" prefWidth="95.0" text="TELEFONE" />
+            <TableColumn fx:id="email" minWidth="0.0" prefWidth="112.0" text="EMAIL" />
+            <TableColumn fx:id="nascimento" prefWidth="107.0" text="NASCIMENTO" />
+          <TableColumn fx:id="nome" prefWidth="132.0" text="NOME" />
+            <TableColumn fx:id="cpf_cliente" prefWidth="111.0" text="CPF" />
+        </columns>
+      </TableView>
+      <TableView layoutX="62.0" layoutY="290.0" prefHeight="161.0" prefWidth="618.0">
+         <columns>
+            <TableColumn fx:id="conta_id" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="agencia" prefWidth="95.0" text="AGÊNCIA" />
+            <TableColumn fx:id="cpf" minWidth="0.0" prefWidth="154.0" text="CPF" />
+            <TableColumn fx:id="tipo" prefWidth="147.0" text="TIPO" />
+            <TableColumn fx:id="saldo" prefWidth="161.0" text="SALDO" />
+         </columns>
+      </TableView>
+      <Text layoutX="298.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Cadastrais da Conta:" />
+   </children>
+</Pane>

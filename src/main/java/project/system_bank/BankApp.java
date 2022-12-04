@@ -1,14 +1,12 @@
 package project.system_bank;
 
-import db.DAO_cliente;
-import db.DAO_conta;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class BankApp extends Application {
+public class BankApp extends Application { // Daniel
 
     private static Stage stage;
 
